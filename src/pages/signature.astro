@@ -152,8 +152,8 @@ const email = 'gethealthy@christinasiciliani.com';
   .manifesto p{font-family:"AltaStack","Cormorant Garamond",serif;font-weight:300;font-size:clamp(22px,2.1vw,28px);line-height:1.5;color:var(--ink);margin:0 0 22px}
   .manifesto p.small{font-size:18px;line-height:1.75;color:var(--ink-soft);margin-bottom:18px}
   .manifesto em{font-style:italic;color:var(--gold-soft)}
-  .triplet{font-style:italic;font-size:clamp(19px,1.6vw,22px);color:var(--ink);margin:28px auto 30px;max-width:48ch;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
-  .triplet span{display:block;margin:4px 0}
+  .manifesto .triplet{font-style:italic;font-size:clamp(19px,1.6vw,22px);color:var(--ink);margin:28px auto 30px;max-width:48ch;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0;text-align:center}
+  .manifesto .triplet span{display:block;margin:4px 0;text-align:center}
 
   .pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:48px;margin-top:56px}
   .pillar{border-top:1px solid var(--line);padding-top:24px}
@@ -198,6 +198,33 @@ const email = 'gethealthy@christinasiciliani.com';
   .reserve .eyebrow{color:var(--gold)}
   .reserve .section-label{color:var(--gold)}
   .reserve-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;margin-top:56px;align-items:start}
+  .reserve-centered{max-width:640px;margin:0 auto;text-align:center;padding:0 16px}
+  .offer-title{
+    color:#fff;
+    font-family:"AltaStack","Italiana",serif;font-weight:300;
+    font-size:clamp(30px,3.6vw,48px);line-height:1.15;letter-spacing:.02em;
+    margin:0 0 24px;
+  }
+  .offer-price{
+    color:#fff;
+    font-family:"AltaStack","Italiana",serif;font-weight:300;
+    font-size:clamp(28px,3.2vw,40px);line-height:1;letter-spacing:.02em;
+    margin:0 0 20px;
+  }
+  .offer-meta{
+    font-family:"AltaStack","Cormorant Garamond",serif;font-style:italic;
+    color:rgba(242,233,212,.72);font-size:16px;line-height:1.65;
+    margin:0 auto 14px;max-width:48ch;
+  }
+  .offer-meta + .offer-meta{margin-bottom:36px}
+  .pay-btn-center{display:inline-block;padding-left:48px;padding-right:48px;min-width:300px}
+  .alt-link{
+    margin-top:22px;
+    font-family:"AltaStack","Cormorant Garamond",serif;font-style:italic;
+    color:rgba(242,233,212,.6);font-size:12px;
+  }
+  .alt-link a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,163,91,.35);padding-bottom:2px}
+  .alt-link a:hover{border-bottom-color:var(--gold)}
 
   .package{border:1px solid rgba(242,233,212,.18);padding:40px 36px;background:rgba(255,255,255,.02)}
   .package .tag{font-family:"Inter",sans-serif;font-size:10px;letter-spacing:.38em;text-transform:uppercase;color:var(--gold);margin-bottom:22px}
@@ -242,7 +269,7 @@ const email = 'gethealthy@christinasiciliani.com';
     <h1 class="hero-title">Signature Activation</h1>
     <div class="hero-script">The Art of Personal Brand Alignment</div>
     <div class="hero-sub">Where Being Becomes Brand</div>
-    <a href={calendly} target="_blank" rel="noopener" class="cta on-dark">Request a Private Consultation</a>
+    <a href={stripeUrl} target="_blank" rel="noopener" class="cta on-dark">Begin Your Intensive</a>
   </div>
 </section>
 
@@ -371,34 +398,24 @@ const email = 'gethealthy@christinasiciliani.com';
   </div>
 </section>
 
-<section id="reserve" class="reserve">
+<section id="begin" class="reserve">
   <div class="wrap">
-    <h2 style="color:#fff;max-width:22ch">Reserve your <em>Strategic Intensive</em>.</h2>
+    <h2 style="color:#fff;text-align:center;max-width:30ch;margin:0 auto 64px"><em>Discover</em> your signature. <em>Activate</em> your brand.</h2>
 
-    <div class="reserve-grid">
-      <div class="package">
-        <div class="eyebrow" style="color:rgba(242,233,212,.55)">The Offering</div>
-        <h3 style="color:#fff;font-family:'AltaStack','Italiana',serif;font-weight:300;letter-spacing:.04em;margin:14px 0 18px;font-size:clamp(22px,2.4vw,30px)">Signature Activation — Strategic Intensive</h3>
-        <div class="price">CHF 555</div>
-        <div class="small" style="color:rgba(242,233,212,.6);font-style:italic;margin:10px 0 28px">Delivered privately. By appointment only.</div>
-      </div>
-
-      <div class="pay-link-panel">
-        <p class="pay-lede">Your place is confirmed upon receipt of payment. Payments are processed securely via Stripe.</p>
-        <a href={stripeUrl} class="pay-btn-link" target="_blank" rel="noopener">Proceed to Secure Payment</a>
-        <div class="pay-meta"><span class="lock">◈</span>Secured by Stripe. A confirmation will follow within one business day.</div>
+    <div class="reserve-centered">
+      <div class="eyebrow" style="color:rgba(242,233,212,.55);margin-bottom:20px">The Offering</div>
+      <h3 class="offer-title">Signature Activation<br />Strategic Intensive</h3>
+      <div class="offer-price">CHF 555</div>
+      <p class="offer-meta">Delivered privately.</p>
+      <p class="offer-meta">
+        Your place is confirmed upon receipt of payment.<br />
+        Payments are processed securely via Stripe.
+      </p>
+      <a href={stripeUrl} class="pay-btn-link pay-btn-center" target="_blank" rel="noopener">Proceed to Secure Payment</a>
+      <div class="alt-link">
+        Or <a href={calendly} target="_blank" rel="noopener">Request a Private Consultation</a>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="begin" class="close">
-  <div class="eyebrow">Begin</div>
-  <h2><em>Discover</em> your signature. <em>Activate</em> your brand.</h2>
-  <p>Signature Activation is by private consultation only. If you feel the call, the next step is a single conversation.</p>
-  <a href={calendly} target="_blank" rel="noopener" class="cta on-light">Request a Private Consultation</a>
-  <div style="margin-top:22px;font-family:'AltaStack','Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:14px">
-    Or <a href="#reserve" style="color:var(--gold-soft);text-decoration:none;border-bottom:1px solid rgba(168,131,68,.4)">reserve your place</a> directly.
   </div>
 </section>
 
