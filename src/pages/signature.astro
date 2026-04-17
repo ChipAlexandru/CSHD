@@ -4,6 +4,7 @@ const gaId = import.meta.env.PUBLIC_GA_ID;
 const title = 'Signature Activation — Christina Siciliani';
 const description = 'A private consultation for conscious leaders. Signature Activation is the art of personal brand alignment — where being becomes brand.';
 const stripeUrl = 'https://book.stripe.com/cNi9AMgos4Jw8rbd2a2Ji01';
+const calendly = 'https://calendly.com/christinasiciliani/30min';
 const email = 'gethealthy@christinasiciliani.com';
 ---
 
@@ -113,13 +114,13 @@ const email = 'gethealthy@christinasiciliani.com';
     text-shadow:0 2px 36px rgba(0,0,0,.45);
   }
   .hero-script{
-    margin:22px 0 30px;font-family:"Pinyon Script",cursive;color:#fff;
-    font-size:clamp(44px,6.2vw,82px);line-height:1;letter-spacing:.005em;
+    margin:18px 0 26px;font-family:"Pinyon Script",cursive;color:#fff;
+    font-size:clamp(26px,3.4vw,44px);line-height:1.05;letter-spacing:.005em;
     text-shadow:0 2px 24px rgba(0,0,0,.45);
   }
   .hero-sub{
-    margin:0 0 40px;font-family:"AltaStack","Italiana",serif;font-weight:400;
-    font-size:clamp(12px,1.05vw,15px);letter-spacing:.44em;
+    margin:0 0 44px;font-family:"AltaStack","Italiana",serif;font-weight:400;
+    font-size:clamp(14px,1.35vw,19px);letter-spacing:.44em;
     text-transform:uppercase;color:#EDE1C8;
   }
 
@@ -241,7 +242,7 @@ const email = 'gethealthy@christinasiciliani.com';
     <h1 class="hero-title">Signature Activation</h1>
     <div class="hero-script">The Art of Personal Brand Alignment</div>
     <div class="hero-sub">Where Being Becomes Brand</div>
-    <a href="#begin" class="cta on-dark">Request a Private Consultation</a>
+    <a href={calendly} target="_blank" rel="noopener" class="cta on-dark">Request a Private Consultation</a>
   </div>
 </section>
 
@@ -249,7 +250,6 @@ const email = 'gethealthy@christinasiciliani.com';
   <div class="wrap">
     <div class="two-col">
       <div>
-        <div class="eyebrow" style="margin-bottom:20px">Founder &amp; Brand Signature Strategist</div>
         <h2>Guiding conscious leaders to activate their signature — and allow recognition to arise <em>naturally</em>.</h2>
       </div>
       <div>
@@ -303,20 +303,20 @@ const email = 'gethealthy@christinasiciliani.com';
 
 <section class="promise">
   <div class="wrap">
-    <div class="section-label eyebrow">The Offer</div>
-    <h2 style="max-width:20ch">From effort-driven recognition to an <em>elemental</em> and <em>resonant</em> signature.</h2>
+    <div class="section-label eyebrow">What Awaits You</div>
+    <h2 style="max-width:22ch">A presence the right people <em>recognise</em> — without persuasion, performance, or pressure.</h2>
     <div class="grid">
       <div class="promise-card">
-        <h4>The Transformation</h4>
-        <p>Activating your unique gifts so presence, influence, and contribution flow <em>effortlessly</em>.</p>
+        <h4>A Presence That Moves First</h4>
+        <p>Walk into any room — or any feed — and be understood before you speak. Your signature does the first work for you.</p>
       </div>
       <div class="promise-card">
-        <h4>The Tension</h4>
-        <p>Moving beyond hustle, noise, and performance-driven branding — for leaders who set the standard and let influence arise naturally.</p>
+        <h4>A Brand That Attracts By Itself</h4>
+        <p>No more hustling for visibility. When your frequency is clear, the right clients, opportunities, and partners find their way to you.</p>
       </div>
       <div class="promise-card">
-        <h4>The Promise</h4>
-        <p>Influence that is magnetic. Contribution that is meaningful. Recognition that is <em>effortless</em>.</p>
+        <h4>Recognition That Feels Earned</h4>
+        <p>Influence that is magnetic. Contribution that is meaningful. A name that carries weight because it carries <em>truth</em>.</p>
       </div>
     </div>
   </div>
@@ -330,19 +330,19 @@ const email = 'gethealthy@christinasiciliani.com';
         <h2>A one-to-one Strategic Intensive for leaders ready to activate their <em>signature</em>.</h2>
       </div>
       <div>
-        <p class="lede">Delivered across three to four deeply personalized sessions, with optional follow-up private sessions for continued refinement and embodiment. Every session is crafted to explore essence, activate unique gifts, and ensure presence, influence, and contribution flow effortlessly.</p>
+        <p class="lede">Delivered across 4 deeply personalized sessions: a 60-minute deep dive around your core strengths to start, followed by three 1:1 sessions of approximately 45 minutes each. Optional follow-up private sessions extend the work for continued refinement and embodiment.</p>
       </div>
     </div>
 
     <div class="format-grid">
       <div class="format-item">
         <div class="label">Structure</div>
-        <div class="value">3–4 <em>sessions</em></div>
-        <div class="note">Over 4–6 weeks. Long enough to uncover essence; short enough to feel rare.</div>
+        <div class="value">4 <em>sessions</em></div>
+        <div class="note">A 60-minute deep dive to open, plus three 1:1 sessions of ~45 minutes each.</div>
       </div>
       <div class="format-item">
         <div class="label">Session Length</div>
-        <div class="value">90 <em>minutes</em></div>
+        <div class="value">45–60 <em>minutes</em></div>
         <div class="note">Private, unhurried, entirely dedicated to your signature.</div>
       </div>
       <div class="format-item">
@@ -373,8 +373,7 @@ const email = 'gethealthy@christinasiciliani.com';
 
 <section id="reserve" class="reserve">
   <div class="wrap">
-    <div class="section-label eyebrow" style="color:var(--gold)">Reserve Your Intensive</div>
-    <h2 style="color:#fff;max-width:20ch">A private place is held <em>by deposit</em>.</h2>
+    <h2 style="color:#fff;max-width:22ch">Reserve your <em>Strategic Intensive</em>.</h2>
 
     <div class="reserve-grid">
       <div class="package">
@@ -397,7 +396,7 @@ const email = 'gethealthy@christinasiciliani.com';
   <div class="eyebrow">Begin</div>
   <h2><em>Discover</em> your signature. <em>Activate</em> your brand.</h2>
   <p>Signature Activation is by private consultation only. If you feel the call, the next step is a single conversation.</p>
-  <a href={`mailto:${email}?subject=Signature%20Activation%20%E2%80%94%20Private%20Consultation`} class="cta on-light">Request a Private Consultation</a>
+  <a href={calendly} target="_blank" rel="noopener" class="cta on-light">Request a Private Consultation</a>
   <div style="margin-top:22px;font-family:'AltaStack','Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:14px">
     Or <a href="#reserve" style="color:var(--gold-soft);text-decoration:none;border-bottom:1px solid rgba(168,131,68,.4)">reserve your place</a> directly.
   </div>
