@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import FeatureRow from '../components/FeatureRow.astro';
+import heroImg from '../assets/images/christina-02730.jpg';
+import signatureImg from '../assets/images/180822-Chris-1418.jpg';
+import deepDiveImg from '../assets/images/christina-02629.jpg';
+
+const calendly = 'https://calendly.com/christinasiciliani/30min';
+---
+
+<BaseLayout
+  title="Christina Siciliani — Self-discovery & communication strategies"
+  description="Supporting you to live a more authentic lifestyle through Human Design and personal branding."
+>
+  <Hero
+    eyebrow="Welcome"
+    title="Signature Activation"
+    tagline="Supporting you to find the freedom to be who you always were."
+    image={heroImg}
+    imageAlt="Christina Siciliani"
+  />
+
+  <FeatureRow image={signatureImg} imageAlt="Private consultations">
+    <p class="eyebrow">Private consultations for conscious leaders</p>
+    <h2>Activate your unique signature</h2>
+    <p class="lead">
+      Allow recognition to arise naturally. Discover the powerful tool of Human Design and join
+      one of the experiences to get closer to your true, authentic, and powerful self.
+    </p>
+    <a class="btn" href={calendly} target="_blank" rel="noopener">Book a free discovery session</a>
+  </FeatureRow>
+
+  <FeatureRow image={deepDiveImg} imageAlt="Human Design deep dive" reverse>
+    <p class="eyebrow">Human Design</p>
+    <h2>Tap into your authentic, powerful self</h2>
+    <p class="lead">
+      Curious to deep dive into self-discovery through the methodology of Human Design? Learn what
+      others have experienced during their transformation.
+    </p>
+    <a class="btn" href="/human-design-faq/">Read the FAQ</a>
+  </FeatureRow>
+
+  <section class="section section-inverted">
+    <div class="container container-narrow center">
+      <p class="eyebrow">Get in touch</p>
+      <h2>Let's talk</h2>
+      <p class="lead">
+        Have a question about self-discovery and maximising your potential? Looking for a speaker
+        on these topics, or interested in collaborating? I'd love to hear from you.
+      </p>
+      <p style="margin-top: 2rem;">
+        <a class="btn" href="mailto:gethealthy@christinasiciliani.com">Email Christina</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>

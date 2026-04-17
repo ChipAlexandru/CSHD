@@ -1,0 +1,33 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  image: ImageMetadata;
+  imageAlt?: string;
+  reverse?: boolean;
+}
+
+const { image, imageAlt = '', reverse = false } = Astro.props;
+---
+
+<section class="section">
+  <div class="container">
+    <div class={`grid-2 ${reverse ? 'reverse' : ''}`}>
+      <div class="media">
+        <Image src={image} alt={imageAlt} widths={[600, 900, 1200]} sizes="(max-width: 768px) 100vw, 50vw" />
+      </div>
+      <div class="copy">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .grid-2.reverse .media { order: 2; }
+  @media (max-width: 768px) {
+    .grid-2.reverse .media { order: 0; }
+  }
+  .copy :global(h2) { margin-bottom: 1rem; }
+  .copy :global(.btn) { margin-top: 1rem; }
+</style>

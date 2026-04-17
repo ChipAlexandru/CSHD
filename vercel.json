@@ -1,0 +1,10 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": true,
+  "redirects": [
+    { "source": "/human-design", "destination": "/human-design/", "permanent": true },
+    { "source": "/branding-consultancy", "destination": "/branding-consultancy/", "permanent": true },
+    { "source": "/human-design-faq", "destination": "/human-design-faq/", "permanent": true },
+    { "source": "/impressum", "destination": "/impressum/", "permanent": true }
+  ]
+}

@@ -1,0 +1,85 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const faqs = [
+  {
+    q: 'I do not have the exact time of birth — is that a problem?',
+    a: 'Having the exact time of birth is strongly recommended, but there are methods that can get close to the result when the time is uncertain.',
+  },
+  {
+    q: 'Human Design feels complicated — what if I feel overwhelmed?',
+    a: 'That concern is understandable. One can go very deep with the work, but like anything meaningful, it is a journey. Don\'t rush yourself. Picking up your chart again after a while often lets you see it through a fresh lens.',
+  },
+  {
+    q: 'Can I use Human Design compatibility to pick friends or employees?',
+    a: 'Technically yes — but I would not recommend leading with it. Human Design is great for recognising the different roles and strengths people bring, but the first impulse to be with someone or work with them should come from your body (your Strategy and Authority).',
+  },
+  {
+    q: 'How long does it take to see the benefits?',
+    a: 'It is often said the process takes around seven years to embody your design fully (de-conditioning). How quickly results show depends on how much action you take around boundaries and decisions. A reading gives you awareness — that is the beginning of the journey. What a first reading very often delivers is a sense of freedom and relief that there was nothing wrong with you in the first place.',
+  },
+];
+---
+
+<BaseLayout
+  title="Human Design FAQ — Christina Siciliani"
+  description="Answers to common questions about Human Design readings: birth-time accuracy, getting started, compatibility, and what to expect over time."
+>
+  <section class="section">
+    <div class="container container-narrow">
+      <p class="eyebrow">FAQ</p>
+      <h1>Human Design FAQ</h1>
+      <p class="lead">The questions that come up most often before a first reading.</p>
+    </div>
+  </section>
+
+  <section class="section-sm">
+    <div class="container container-narrow">
+      <div class="faqs">
+        {faqs.map((item) => (
+          <details>
+            <summary><h3>{item.q}</h3></summary>
+            <p>{item.a}</p>
+          </details>
+        ))}
+      </div>
+      <p style="margin-top: 3rem; text-align: center;">
+        <a class="btn" href="https://calendly.com/christinasiciliani/30min" target="_blank" rel="noopener">Book a free discovery session</a>
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .faqs details {
+    border-top: 1px solid #e5e5e5;
+    padding-block: 1.5rem;
+  }
+  .faqs details:last-child { border-bottom: 1px solid #e5e5e5; }
+  .faqs summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .faqs summary::-webkit-details-marker { display: none; }
+  .faqs summary h3 {
+    margin: 0;
+    font-size: 1.375rem;
+    flex: 1;
+  }
+  .faqs summary::after {
+    content: '+';
+    font-size: 1.5rem;
+    font-family: var(--font-serif);
+    font-weight: 300;
+    line-height: 1;
+  }
+  .faqs details[open] summary::after { content: '−'; }
+  .faqs p {
+    margin-top: 1rem;
+    color: var(--color-muted);
+  }
+</style>

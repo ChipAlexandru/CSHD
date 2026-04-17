@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import portrait from '../assets/images/christina-02730.jpg';
+
+const calendly = 'https://calendly.com/christinasiciliani/30min';
+---
+
+<BaseLayout
+  title="Human Design — Christina Siciliani"
+  description="Private Human Design consultations for conscious leaders. Activate your unique signature."
+>
+  <section class="section">
+    <div class="container container-narrow">
+      <p class="eyebrow">Human Design</p>
+      <h1>Tap into your authentic, powerful self</h1>
+      <p class="lead">
+        Human Design is a tool for self-discovery that combines astrology, the I Ching, the Kabbalah,
+        and the chakra system into a single chart based on your birth data. It shows you how you are
+        designed to make decisions, use your energy, and interact with others.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-inverted">
+    <div class="container">
+      <div class="grid-2">
+        <div>
+          <Image src={portrait} alt="Christina Siciliani" widths={[600, 900, 1200]} sizes="(max-width: 768px) 100vw, 50vw" />
+        </div>
+        <div>
+          <h2>Private consultations for conscious leaders</h2>
+          <p>
+            In a one-to-one reading we walk through your chart together — your type, strategy,
+            authority, and the conditioning patterns you're ready to release. You leave with a clear
+            sense of how to align with who you already are.
+          </p>
+          <p>
+            Curious to go deeper? Book a complimentary 30-minute discovery call to see if the work
+            is a fit.
+          </p>
+          <a class="btn" href={calendly} target="_blank" rel="noopener">Book a free discovery session</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-narrow center">
+      <h2>Have questions first?</h2>
+      <p>Read the Human Design FAQ for answers to the most common questions.</p>
+      <p><a class="btn" href="/human-design-faq/">View the FAQ</a></p>
+    </div>
+  </section>
+</BaseLayout>

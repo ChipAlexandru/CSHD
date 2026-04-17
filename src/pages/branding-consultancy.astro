@@ -1,0 +1,79 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { Image } from 'astro:assets';
+import portrait from '../assets/images/christina-02507.jpg';
+
+const calendly = 'https://calendly.com/christinasiciliani/30min';
+---
+
+<BaseLayout
+  title="Branding Consultancy — Christina Siciliani"
+  description="Personal and business branding consulting, drawing on 25+ years of marketing experience across corporations and start-ups."
+>
+  <section class="section">
+    <div class="container container-narrow">
+      <p class="eyebrow">Branding Consultancy</p>
+      <h1>Authentic. Efficient. Customized.</h1>
+      <p class="lead">
+        Drawing on more than 25 years of marketing experience — in large corporations and
+        start-ups, locally and globally — I help you set up or re-position your business and
+        personal brand to attract the clients you want and leverage your individuality.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section-inverted">
+    <div class="container">
+      <div class="grid-2">
+        <div class="filtered">
+          <Image src={portrait} alt="Christina Siciliani" widths={[600, 900, 1200]} sizes="(max-width: 768px) 100vw, 50vw" />
+        </div>
+        <div>
+          <h2>My mission</h2>
+          <p>
+            To empower you to present yourself through your brand authentically — strengthening
+            your core essence and enabling you to grow and collaborate.
+          </p>
+          <p>
+            <strong>Core industries:</strong> Personal Development · FMCG · Financial Institutions
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container container-narrow center">
+      <h2>Tailored packages</h2>
+      <p class="lead">
+        Individually tailored to your needs, with pricing starting from <strong>800 CHF</strong>.
+      </p>
+      <p>
+        <a class="btn" href={calendly} target="_blank" rel="noopener">Book a free inquiry call</a>
+      </p>
+      <p>
+        Or reach out by <a href="mailto:gethealthy@christinasiciliani.com">email</a> or
+        <a href="https://www.instagram.com/christina.siciliani/" target="_blank" rel="noopener">Instagram</a>.
+      </p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .filtered {
+    position: relative;
+    overflow: hidden;
+  }
+  .filtered :global(img) {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  .filtered::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+  }
+</style>

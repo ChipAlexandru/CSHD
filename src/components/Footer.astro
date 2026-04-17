@@ -1,0 +1,41 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p class="copy">© {year} Christina Siciliani. All rights reserved.</p>
+    <nav aria-label="Footer">
+      <ul>
+        <li><a href="/impressum/">Impressum</a></li>
+        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+        <li><a href="https://www.instagram.com/christina.siciliani/" target="_blank" rel="me noopener">Instagram</a></li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    border-top: 1px solid #eee;
+    padding-block: 2rem;
+    margin-top: 4rem;
+    font-size: 0.875rem;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .copy { margin: 0; }
+  .site-footer ul {
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .site-footer a { text-decoration: none; }
+</style>

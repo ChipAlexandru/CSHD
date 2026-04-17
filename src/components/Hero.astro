@@ -1,0 +1,69 @@
+---
+import { Image } from 'astro:assets';
+
+interface Props {
+  eyebrow?: string;
+  title: string;
+  tagline?: string;
+  image?: ImageMetadata;
+  imageAlt?: string;
+}
+
+const { eyebrow, title, tagline, image, imageAlt = '' } = Astro.props;
+---
+
+<section class="hero">
+  {image && (
+    <div class="hero-image">
+      <Image src={image} alt={imageAlt} widths={[800, 1200, 1800, 2400]} sizes="100vw" loading="eager" />
+      <div class="overlay"></div>
+    </div>
+  )}
+  <div class="hero-content container">
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h1>{title}</h1>
+    {tagline && <p class="tagline">{tagline}</p>}
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    overflow: hidden;
+  }
+  .hero-image {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .hero-image :global(img) {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 50% 30%;
+  }
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    padding-block: 6rem;
+    max-width: 960px;
+  }
+  .hero-content h1 {
+    font-weight: 300;
+  }
+  .tagline {
+    font-family: var(--font-serif);
+    font-size: 1.375rem;
+    max-width: 640px;
+    letter-spacing: 0.02em;
+  }
+</style>
